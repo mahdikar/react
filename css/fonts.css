@@ -1,0 +1,8 @@
+@font-face {
+    font-family: myFont;
+    src: url('../resources/sf-compact-text-light-4.otf');
+}
+@font-face {
+    font-family: jdIonIcons;
+    src: url('../resources/jdIonIcons.woff');
+}

@@ -1,0 +1,674 @@
+$colorBlue:#028EE8;
+$colorRed:#C50706;
+$colorOrange:orange;
+$colorGreen:#41BF4A;
+$colorSilver:silver;
+
+
+*{
+  font-family: myFont;
+  box-sizing:border-box;
+  margin:0px;
+  padding:0px;
+
+}
+body{
+  text-align:center;
+  background-color:$colorSilver;
+
+}
+/* ------------------------------------------------------- */
+#backgroundImage{
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0px;
+  left:0px;
+  right:0px;
+  bottom:0px;
+  background-image:url("../resources/background.jpg");
+  background-size:cover;
+  background-repeat: no-repeat;
+  z-index:-1;
+
+}
+/* ------------------------------------------------------- */
+#messageBox{
+  min-width:200px;
+  width:fit-content;
+  max-width:800px;
+  height:auto;
+  margin:0px auto;
+  border:1px solid $colorRed;
+  border-radius:5px;
+  background-color:white;
+  font-size:18px;
+  text-align:center;
+  padding:20px;
+  color:$colorRed;
+  margin-top:25px;
+  margin-bottom:15px;
+  word-wrap:break-word;
+
+}
+#messageBox:empty {
+  display:none;
+
+}
+/* ------------------------------------------------------- */
+#allWrapper{
+  max-width:1540px;
+  min-height:10000px;
+  height:100%;
+  background-color:none;
+  margin:0px auto;
+  text-align:center;
+
+}
+#itemsWrapper{
+  z-index:1;
+  padding-left:10px;
+  padding-right:10px;
+  padding-top:50px;
+  padding-bottom:50px;
+  background-color:none;
+  width:100%;
+  height:100%;
+  margin:0px auto;
+  min-height:650px;
+  background-image:url("../resources/preloader.gif");
+  background-position:top 166px center;
+  background-repeat:no-repeat;
+
+
+}
+.emptyMessage{
+  width:fit-content;
+  height:auto;
+  width:fit-content;
+  max-width:600px;
+  word-wrap:break-word;
+  font-size:20px;
+  color:$colorBlue;
+  border:1px solid $colorBlue;
+  border-radius:5px;
+  padding:40px;
+  margin:0px auto;
+  margin-top:100px;
+  background-color:rgba(0,0,0,0.5);
+
+}
+#buttonsWrapper{
+  z-index:1;
+  width:1540px;
+  height:auto;
+  background-color:none;
+  position:fixed;
+  bottom:0px;
+  left:50%;
+  margin-left:-770px;
+  padding-bottom:40px;
+
+}
+/* ------------------------------------------------------- */
+.button{
+  border-radius:5px;
+  height:50px;
+  line-height:50px;
+  width:fit-content;
+  display:inline-block;
+  padding-left:20px;
+  padding-right:20px;
+  background-color:$colorBlue;
+  font-weight:normal;
+  color:white;
+  margin:10px;
+  margin-left:0px;
+  margin-right:10px;
+  margin-top:25px;
+  cursor:pointer;
+  font-size:13px;
+  vertical-align:top;
+
+}
+.button[id=btnReject]{
+  margin-right:30px;
+  background-color:$colorRed;
+
+}
+.button[id=btnSend]{
+  margin-right:30px;
+
+}
+.button[id=btnSuspend]{
+  margin-right:30px;
+  background-color:$colorOrange;
+
+}
+.button[id=btnList]{
+  background-color:$colorGreen;
+
+}
+.button span {
+  border-radius:5px;
+  background-color:white;
+  color:black;
+  padding:4px;
+  margin:0px;
+  margin-left:5px;
+  vertical-align:top;
+  font-size:12px;
+
+}
+.button span:empty {
+  display:none;
+
+}
+.clsButtonDropHover[id=btnReject]{
+  box-shadow:0px 0px 5px 10px $colorRed;
+
+}
+.clsButtonDropHover[id=btnSend]{
+  box-shadow:0px 0px 5px 10px $colorBlue;
+
+}
+.clsButtonDropHover[id=btnSuspend]{
+  box-shadow:0px 0px 5px 10px $colorOrange;
+
+}
+.button:active{
+  opacity:0.8;
+
+}
+.disabledbutton{
+  background-color:$colorSilver;
+
+}
+/*----------------------------------------------*/
+.clsItem {
+  position:relative;
+  display:inline-block;
+  margin:10px;
+  border:1px solid $colorBlue;
+  border-radius:5px;
+  background-color:white;
+  /*background-image:url('../images/newbackground.png');
+  background-position:top;
+  background-repeat: repeat-x;*/
+  width:370px;
+  min-height:250px;
+  height:auto;
+  cursor:pointer;
+  overflow:hidden;
+  opacity:1;
+
+}
+.clsItem .itemHeader {
+  position:relative;
+  display:block;
+  padding:15px;
+  background-color:rgba(192,192,192,0.1);
+  /* opacity:0.5; */
+  width:auto;
+  height:50px;
+  line-hight:50px;
+  overflow:hidden;
+  border-bottom:1px solid rgba(2,142,232,0.2);
+
+
+}
+.clsItem .itemHeader span {
+  color:$colorBlue;
+  font-size:16px;
+  font-weight:normal;
+  vertical-align:top;
+
+}
+.clsItem .itemHeader .away {
+  font-family:jdIonicons;
+  display:inline-block;
+  margin:0px;
+  padding:0px;
+  margin-right:12px;
+  font-size:26px;
+  vertical-align:top;
+  background-color:none;
+  color:$colorOrange;
+  float:left;
+  margin-top:-4px;
+  display:none;
+
+}
+.clsItem .itemHeader .suspend {
+  font-family:jdIonicons;
+  display:inline-block;
+  margin:0px;
+  padding:2px;
+  padding-left:6px;
+  padding-right:6px;
+  margin-right:12px;
+  font-size:20px;
+  vertical-align:top;
+  background-color:$colorOrange;
+  float:left;
+  margin-top:-3px;
+  border-radius:100%;
+  color:white;
+  display:none;
+
+}
+.clsItem .itemHeader .priority {
+  font-family:jdIonicons;
+  display:inline-block;
+  margin:0px;
+  padding:5px;
+  padding-left:6px;
+  padding-right:6px;
+  margin-right:12px;
+  font-size:20px;
+  vertical-align:top;
+  background-color:$colorBlue;
+  float:left;
+  margin-top:-6px;
+  border-radius:100%;
+  color:white;
+  display:none;
+
+}
+.clsItem .itemHeader .rejected {
+  font-family:jdIonicons;
+  display:inline-block;
+  margin:0px;
+  padding:0px;
+  margin-right:12px;
+  font-size:26px;
+  vertical-align:top;
+  background-color:none;
+  float:left;
+  margin-top:-4px;
+  border-radius:5px;
+  color:$colorRed;
+  display:none;
+
+}
+.clsItem .itemHeader .done {
+  font-family:jdIonicons;
+  display:inline-block;
+  margin:0px;
+  padding:0px;
+  margin-right:12px;
+  font-size:26px;
+  vertical-align:top;
+  background-color:none;
+  float:left;
+  margin-top:-4px;
+  border-radius:5px;
+  color:$colorGreen;
+  display:none;
+
+}
+.clsItem .itemBody {
+  position:relative;
+  display:block;
+  padding:10px;
+  padding-top:5px;
+  background-color:none;
+  /* opacity:0.5; */
+  width:100%;
+  height:160px;
+  overflow:auto;
+
+
+}
+.clsItem .itemBody .item {
+  position:relative;
+  display:block;
+  padding:0px;
+  background-color:none;
+  /* opacity:0.5; */
+  width:auto;
+  height:auto;
+  font-size:0px;
+  margin-top:5px;
+  margin-bottom:5px;
+
+}
+.clsItem .itemBody .item .name {
+  position:relative;
+  display:inline-block;
+  padding:0px;
+  margin:0px;
+  background-color:none;
+  /* opacity:0.5; */
+  width:250px;
+  height:60px;
+  font-size:20px;
+  text-align:left;
+  vertical-align:top;
+  color:black;
+  overflow:hidden;
+  float:left;
+  -ms-word-wrap:break-word;
+  word-wrap:break-word;
+
+
+
+}
+.clsItem .itemBody .item .quantity {
+  position:relative;
+  display:inline-block;
+  padding:0px;
+  margin:0px;
+  background-color:none;
+  /* opacity:0.5; */
+  width:80px;
+  height:60px;
+  /* line-height:60px; */
+  font-size:20px;
+  text-align:right;
+  vertical-align:top;
+  overflow:hidden;
+  float:right;
+
+}
+.clsItem .itemBody .item .quantity span{
+  text-align:right;
+  vertical-align:top;
+  float:right;
+
+}
+.clsItem .itemBody .item .itemFixedDescription {
+  border-radius:5px;
+  font-size:16px;
+  font-weight:normal;
+  color:black;
+  border:1px solid $colorSilver;
+  position:relative;
+  display:block;
+  padding:5px;
+  padding-left:10px;
+  padding-right:10px;
+  background-color:rgba(245, 245, 245,0.1);
+  /* opacity:0.5; */
+  width:fit-content;
+  max-width:250px;
+  height:auto;
+  text-align:left;
+  overflow:hidden;
+  word-wrap:break-word;
+
+
+}
+.clsItem .itemDescription {
+  position:relative;
+  display:block;
+  padding:5px;
+  padding-left:10px;
+  padding-right:10px;
+  background-color:rgba(245, 245, 245,0.1);
+  border-top:1px solid rgba(2,142,232,0.1);
+  /* opacity:0.5; */
+  width:100%;
+  min-height:38px;
+  text-align:left;
+  overflow:hidden;
+  word-wrap:break-word;
+
+}
+.clsItem .itemDescription span {
+  margin-left:5px;
+  margin-right:5px;
+  font-size:20px;
+  font-weight:normal;
+  color:$colorBlue;
+  overflow:hidden;
+
+}
+/*--------------------------------------------------*/
+.clsItemDropHoverDefault{
+  box-shadow:0px 0px 0px 3px $colorBlue;
+  border: 2px dashed $colorBlue;
+  background-color:rgba(2,142,232,0.1);
+  width:374px;
+  height:254px;
+
+  /*box-shadow:none;
+  border: 2px dashed #41BF4A;
+  background-color:rgba(65,191,74,0.3)
+  width:374px;
+  height:254px;*/
+
+  /* position:relative;
+  display:inline-block;
+  margin:10px;
+  border:1px solid #028EE8;
+  border-radius:5px;
+  background-color:white;
+  width:370px;
+  min-height:250px;
+  height:auto;
+  cursor:pointer;
+  overflow:hidden;
+  opacity:1; */
+
+}
+.clsItemDropHoverReject{
+  box-shadow:0px 0px 2px $colorRed;
+  border: 2px dashed $colorRed;
+  background-color:rgba(197,7,6,0.5);
+  width:374px;
+  height:254px;
+
+  /* position:relative;
+  display:inline-block;
+  margin:10px;
+  border:1px solid #028EE8;
+  border-radius:5px;
+  background-color:white;
+  width:370px;
+  min-height:250px;
+  height:auto;
+  cursor:pointer;
+  overflow:hidden;
+  opacity:1; */
+
+}
+.clsItemDropHoverSend{
+  box-shadow:0px 0px 2px $colorBlue;
+  border: 2px dashed  $colorBlue;
+  width:374px;
+  height:254px;
+
+  /* position:relative;
+  display:inline-block;
+  margin:10px;
+  border:1px solid #028EE8;
+  border-radius:5px;
+  background-color:white;
+  width:370px;
+  min-height:250px;
+  height:auto;
+  cursor:pointer;
+  overflow:hidden;
+  opacity:1; */
+
+}
+.clsItemDropHoverSuspend{
+  box-shadow:0px 0px 2px $colorOrange;
+  border: 2px dashed $colorOrange;
+  background-color:rgba(197,155,6,0.5);
+  width:374px;
+  height:254px;
+
+  /* position:relative;
+  display:inline-block;
+  margin:10px;
+  border:1px solid #028EE8;
+  border-radius:5px;
+  background-color:white;
+  width:370px;
+  min-height:250px;
+  height:auto;
+  cursor:pointer;
+  overflow:hidden;
+  opacity:1; */
+
+}
+.clsItemDropHoverError{
+  box-shadow:0px 0px 0px 3px $colorRed;
+  border: 2px dashed $colorRed;
+  background-color:rgba(197,7,6,0.1);
+  width:374px;
+  height:254px;
+
+  /* position:relative;
+  display:inline-block;
+  margin:10px;
+  border:1px solid #028EE8;
+  border-radius:5px;
+  background-color:white;
+  width:370px;
+  min-height:250px;
+  height:auto;
+  cursor:pointer;
+  overflow:hidden;
+  opacity:1; */
+
+}
+.clsItemOpacity20{
+  opacity:0.30;
+  background-color:rgba(2,142,232,0.5);
+
+  /* position:relative;
+  display:inline-block;
+  margin:10px;
+  border:1px solid #028EE8;
+  border-radius:5px;
+  background-color:white;
+  width:370px;
+  min-height:250px;
+  height:auto;
+  cursor:pointer;
+  overflow:hidden;
+  opacity:1; */
+
+
+}
+.clsItemOpacity90{
+  opacity:0.90;
+
+  /* position:relative;
+  display:inline-block;
+  margin:10px;
+  border:1px solid #028EE8;
+  border-radius:5px;
+  background-color:white;
+  width:370px;
+  min-height:250px;
+  height:auto;
+  cursor:pointer;
+  overflow:hidden;
+  opacity:1; */
+
+
+}
+.clsItemOpacityFolder{
+  opacity:0.30;
+  background-color:rgba(65,191,74,0.5);
+
+  /* position:relative;
+  display:inline-block;
+  margin:10px;
+  border:1px solid #028EE8;
+  border-radius:5px;
+  background-color:white;
+  width:370px;
+  min-height:250px;
+  height:auto;
+  cursor:pointer;
+  overflow:hidden;
+  opacity:1; */
+
+
+}
+.clsItemHighlighted{
+  box-shadow:0px 0px 0px 1px $colorBlue;
+  border:2px solid $colorBlue;
+  width:374px;
+  height:254px;
+
+  /* position:relative;
+  display:inline-block;
+  margin:10px;
+  border:1px solid #028EE8;
+  border-radius:5px;
+  background-color:white;
+  width:370px;
+  min-height:250px;
+  height:auto;
+  cursor:pointer;
+  overflow:hidden;
+  opacity:1; */
+
+}
+.clsItemPriority{
+  box-shadow:0px 0px 0px 4px $colorBlue;
+  border:1px solid $colorBlue;
+
+  /* position:relative;
+  display:inline-block;
+  margin:10px;
+  border:1px solid #028EE8;
+  border-radius:5px;
+  background-color:white;
+  width:370px;
+  min-height:250px;
+  height:auto;
+  cursor:pointer;
+  overflow:hidden;
+  opacity:1; */
+
+}
+.clsItemFolderPriority{
+  box-shadow:0px 0px 0px 3px $colorGreen;
+  border:2px dashed $colorGreen;
+  width:374px;
+  height:254px;
+
+  /* position:relative;
+  display:inline-block;
+  margin:10px;
+  border:1px solid #028EE8;
+  border-radius:5px;
+  background-color:white;
+  width:370px;
+  min-height:250px;
+  height:auto;
+  cursor:pointer;
+  overflow:hidden;
+  opacity:1; */
+
+}
+.clsItemFolder{
+  box-shadow:0px 0px 2px $colorGreen;
+  border:2px dashed $colorGreen;
+  opacity:1px;
+  width:374px;
+  height:254px;
+
+  /* position:relative;
+  display:inline-block;
+  margin:10px;
+  border:1px solid #028EE8;
+  border-radius:5px;
+  background-color:white;
+  width:370px;
+  min-height:250px;
+  height:auto;
+  cursor:pointer;
+  overflow:hidden;
+  opacity:1; */
+
+}
+/*-------------------------------------------------------*/
+

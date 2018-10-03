@@ -1,0 +1,66 @@
+<div class="cls-form" style="width:fit-content;" onclick="clearTimeout(window.settingsTimeout);window.settingsTimeout = setTimeout(function(){window.saveSettings();},100);">
+    <div class="cls-form-Field">
+        <label style="min-width:170px;">Language</label>
+        <div class="cls-form-select" data-open="false" data-type="" id="select-language">
+            <div class="cls-form-select-header"><span class="text"></span><span class="cls-form-select-header-icon"></span></div>
+            <div class="cls-form-select-option" data-selected="false" id="option-english">English</div>
+            <div class="cls-form-select-option" data-selected="false" id="option-chinese">Chinese</div>
+        </div>
+
+
+
+    </div>
+    <div class="cls-form-Field">
+        <label style="min-width:170px;">Mode</label>
+        <div class="cls-form-radio" data-type="" id="radio-mode">
+            <div class="cls-form-radio-option" data-selected="false"><span class="text">Kitchen</span><span class="cls-form-radio-option-icon"></span></div>
+            <div class="cls-form-radio-option" data-selected="false"><span class="text">Pantry</span><span class="cls-form-radio-option-icon"></span></div>
+        </div>
+
+
+
+    </div>
+    <div class="cls-form-Field">
+        <label style="min-width:170px;">Database settings</label>
+        <input type="text" class="cls-form-text" value="" data-value="" placeholder="Please enter Host, Username, Password, Database" style="width:400px;" id="text-database" onkeyup="clearTimeout(window.settingsTimeout);window.settingsTimeout = setTimeout(function(){window.saveSettings();},100);">
+
+
+
+    </div>
+    <div class="cls-form-Field">
+        <label style="min-width:170px;">Refresh time</label>
+        <div class="cls-form-button" id="button-minus">
+            -
+        </div>
+        <label id="label-seconds" data-value=1>1s</label>
+        <div class="cls-form-button" id="button-plus">
+            +
+        </div>
+
+
+
+    </div>
+    <div class="cls-form-Field">
+        <label style="min-width:170px;">Printer group</label>
+        <div class="cls-form-radio" data-type="" id="radio-printer">
+            <div class="cls-form-radio-option" data-selected="false"><span class="text">All</span><span class="cls-form-radio-option-icon"></span></div>
+            <div class="cls-form-radio-option" data-selected="false"><span class="text">Cashier printer</span><span class="cls-form-radio-option-icon"></span></div>
+            <div class="cls-form-radio-option" data-selected="false"><span class="text">Bar</span><span class="cls-form-radio-option-icon"></span></div>
+        </div>
+
+
+
+    </div>
+    <div class="cls-form-Field">
+        <label style="min-width:170px;">Dish priority</label>
+        <div class="cls-form-radio" data-type="" id="radio-priority">
+            <div class="cls-form-radio-option" data-selected="false"><span class="text">On</span><span class="cls-form-radio-option-icon"></span></div>
+            <div class="cls-form-radio-option" data-selected="false"><span class="text">Off</span><span class="cls-form-radio-option-icon"></span></div>
+        </div>
+
+
+
+    </div>
+
+
+</div>

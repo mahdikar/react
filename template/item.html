@@ -1,0 +1,29 @@
+<div class="clsItem" onclick="selectItem($(this),true);" onmouseup="window.mouseDown = false;" onmousedown="window.mouseDown = true;" ondblclick="window.sendItems($(this));$(this).fadeOut(300);window.resetItemsStyle();">
+    <div class="itemHeader">
+        <div class="priority"></div><div class="rejected"></div><div class="suspend"></div><div class="away"></div><div class="done"></div><span style="float:left;">{{table_name}}</span><span id="order_time" style="margin:0px auto;"></span><span id="wait_time" style="float:right;"></span>
+
+    </div>
+    <div class="itemBody">
+        <div class="item">
+            <div class="name">
+                <span>{{menu_item_id}}.{{item_name1}}</span><br />
+                <span>{{item_name2}}</span>
+            </div>
+            <div class="quantity">
+                <span style="padding-left:5px;padding-right:5px;padding-top:3px;padding-bottom:3px;color:white;background-color:#028EE8;border-radius:5px;margin-left:8px;">{{unit}}</span><span style="font-size:22px;">X<span id="spanQuantity">{{quantity}}</span></span>
+            </div>
+            <div class="itemFixedDescription">
+                {{description}}
+
+
+            </div>
+        </div>
+
+
+    </div>
+    <div class="itemDescription">
+        <span>{{check_name}}</span>
+
+
+    </div>
+</div>

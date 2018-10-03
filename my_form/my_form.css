@@ -1,0 +1,240 @@
+/* my own form ----------------------------------------------------*/
+@font-face {
+    font-family: myFont;
+    src: url('sf-compact-text-light-4.otf');
+}
+@font-face {
+    font-family: jdIonicons;
+    src: url('jdIonIcons.woff');
+}
+.cls-form{
+    box-sizing:border-box;
+    margin:0px;
+    padding:0px;
+    width:100%;
+    height:auto;
+    background-color:none;
+    text-align:left;
+    margin:0px auto;
+    margin-top:100px;
+
+}
+
+.cls-form-Field{
+    min-height:50px;
+    line-height:50px;
+    height:auto;
+    width:100%;
+    background-color:none;
+    margin-bottom:15px;
+    overflow:visible;
+    font-size:16px;
+    font-family:myFont;
+
+}
+.cls-form-Field > * {
+    margin-left:6px;
+    display:inline-block;
+    vertical-align:top;
+
+}
+.cls-form-Field > *:first-child {
+   margin-left:0px;
+
+}
+/*-----------------------------------------------------------------*/
+.cls-form-Field label {
+    display:inline-block;
+    background-color:none;
+
+}
+/*-----------------------------------------------------------------*/
+.cls-form-Field .cls-form-select {
+    background-color:white;
+    min-width:150px;
+    width:fit-content;
+    height:auto;
+    border:1px solid #028EE8;
+    border-radius:5px;
+    cursor:pointer;
+    overflow:hidden;
+    -webkit-transition: all 0.5s; /* Safari */
+    transition: all 0.5s;
+
+}
+.cls-form-Field .cls-form-select > div {
+    padding-left:10px;
+    padding-right:10px;
+    width:100%;
+    height:100%;
+    border-bottom:1px dashed #028EE8;
+
+}
+.cls-form-Field .cls-form-select > div:last-child {
+    border-bottom:0px;
+
+
+}
+.cls-form-Field .cls-form-select > div.noBottomBorder {
+    border-bottom:0px;
+
+
+}
+.cls-form-Field .cls-form-select > .cls-form-select-header {
+    color:black;
+    font-weight:normal;
+    min-height:50px;
+    background-color:none;
+
+}
+.cls-form-Field .cls-form-select > .cls-form-select-header .values {
+    vertical-align:middle;
+    display:inline;
+    width:fit-content;
+    border-radius:5px;
+    margin-left:4px;
+    padding:4px;
+    background-color:rgba(2,142,232,0.1);
+
+}
+.cls-form-Field .cls-form-select > .cls-form-select-header .values:first-child {
+    margin-left:0px;
+
+}
+.cls-form-Field .cls-form-select > .cls-form-select-header .cls-form-select-header-icon {
+    font-family:jdIonicons;
+    color:#028EE8;
+    background-color:none;
+    float:right;
+    font-size:15px;
+    margin-left:10px;
+
+}
+.cls-form-Field .cls-form-select > .cls-form-select-option {
+    color:black;
+    font-size:13px;
+    -webkit-transition: all 0.5s; /* Safari */
+    transition: all 0.5s;
+
+}
+.cls-form-Field .cls-form-select > .cls-form-select-option-selected {
+    color:white;
+    font-size:13px;
+    background-color:#028EE8;
+    -webkit-transition: all 0.5s; /* Safari */
+    transition: all 0.5s;
+
+}
+.cls-form-Field .cls-form-select > .cls-form-select-option:hover {
+    background-color:rgba(2,142,232,0.1);
+    color:black;
+
+}
+/*-----------------------------------------------------------------*/
+.cls-form-Field .cls-form-radio{
+    background-color:white;
+    width:fit-content;
+    height:auto;
+    overflow:hidden;
+    -webkit-transition: all 0.5s; /* Safari */
+    transition: all 0.5s;
+
+}
+.cls-form-Field .cls-form-radio > div {
+    display:inline-block;
+    vertical-align:top;
+    padding-left:10px;
+    padding-right:10px;
+    width:fit-content;
+    margin-left:6px;
+    height:100%;
+    border:1px solid #028EE8;
+    border-radius:5px;
+    cursor:pointer;
+
+}
+.cls-form-Field .cls-form-radio > div:first-child {
+    margin-left:0px;
+
+}
+.cls-form-Field .cls-form-radio > .cls-form-radio-option {
+    color:black;
+    font-weight:normal;
+    background-color:none;
+    -webkit-transition: all 0.5s; /* Safari */
+    transition: all 0.5s;
+
+}
+.cls-form-Field .cls-form-radio > .cls-form-radio-option:not(.cls-form-radio-option-selected):hover {
+    background-color:rgba(2,142,232,0.1);
+    color:black;
+
+}
+.cls-form-Field .cls-form-radio > .cls-form-radio-option-selected {
+    color:white;
+    font-weight:normal;
+    background-color:#028EE8;
+
+}
+.cls-form-Field .cls-form-radio > .cls-form-radio-option .cls-form-radio-option-icon {
+    font-family:jdIonicons;
+    color:white;
+    background-color:none;
+    float:right;
+    font-size:25px;
+    margin-left:7px;
+    display:none;
+
+}
+/*-----------------------------------------------------------------*/
+.cls-form-Field .cls-form-text{
+    background-color:white;
+    min-width:150px;
+    width:fit-content;
+    height:50px;
+    line-height:50px;
+    border:1px solid #028EE8;
+    border-radius:5px;
+    overflow:hidden;
+    -webkit-transition: all 0.5s; /* Safari */
+    transition: all 0.5s;
+    outline:none;
+    padding-left:10px;
+    padding-right:10px;
+
+
+}
+/*-----------------------------------------------------------------*/
+.cls-form-Field .cls-form-button{
+    display:inline-block;
+    background-color:#028EE8;
+    min-width:50px;
+    width:fit-content;
+    height:50px;
+    line-height:50px;
+    border:1px solid #028EE8;
+    border-radius:5px;
+    overflow:hidden;
+    -webkit-transition: all 0.5s; /* Safari */
+    transition: all 0.5s;
+    outline:none;
+    padding-left:10px;
+    padding-right:10px;
+    text-align:center;
+    font-size:20px;
+    color:white;
+    cursor:pointer;
+
+}
+.cls-form-Field .cls-form-button:hover {
+    font-size:30px;
+    line-height:40px;
+    background-color:rgba(2,142,232,0.1);
+    color:black;
+
+}
+.cls-form-Field .cls-form-button:active {
+    opacity:0.8;
+    line-height:50px;
+
+}
